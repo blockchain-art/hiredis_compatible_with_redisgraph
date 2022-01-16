@@ -938,9 +938,9 @@ redisPushFn *redisSetPushCallback(redisContext *c, redisPushFn *fn) {
  * and read some bytes from the socket and feed them to the reply parser.
  *
  * After this function is called, you may use redisGetReplyFromReader to
- * see if there is a reply available. */
+ * see if there is a reply available. water*/
 int redisBufferRead(redisContext *c) {
-    char buf[1024*16];
+    char buf[1024*32];
     int nread;
 
     /* Return early when the context has seen an error. */
