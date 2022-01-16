@@ -64,7 +64,7 @@
 #define REDIS_REPLY_VERB 14
 
 /* Default max unused reader buffer. water*/ 
-#define REDIS_READER_MAX_BUF (1024*32)
+#define REDIS_READER_MAX_BUF (1024*64)
 
 /* Default multi-bulk element limit */
 #define REDIS_READER_MAX_ARRAY_ELEMENTS ((1LL<<32) - 1)

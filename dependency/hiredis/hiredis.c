@@ -940,7 +940,7 @@ redisPushFn *redisSetPushCallback(redisContext *c, redisPushFn *fn) {
  * After this function is called, you may use redisGetReplyFromReader to
  * see if there is a reply available. water*/
 int redisBufferRead(redisContext *c) {
-    char buf[1024*32];
+    char buf[1024*64];
     int nread;
 
     /* Return early when the context has seen an error. */

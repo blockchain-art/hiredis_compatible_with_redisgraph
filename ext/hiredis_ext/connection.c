@@ -44,7 +44,7 @@ static void parent_context_free(redisParentContext *pc) {
 
 static void parent_context_raise(redisParentContext *pc) {
     int err;
-    char errstr[1024];
+    char errstr[4024];
 
     /* Copy error and free context */
     err = pc->context->err;
@@ -177,7 +177,7 @@ static VALUE connection_generic_connect(VALUE self, redisContext *c, VALUE arg_t
     Data_Get_Struct(self,redisParentContext,pc);
 
     if (c->err) {
-        char buf[1024];
+        char buf[4024];
         int err;
 
         /* Copy error and free context */
